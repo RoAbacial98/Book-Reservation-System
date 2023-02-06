@@ -1,0 +1,60 @@
+@model Books
+@{
+    ViewData["Title"] = "BookDetails";
+}
+
+    <div class="card">
+<div class="card-header">
+<h5>Book Details</h5>
+<div class="card-header-right">
+<i class="icofont icofont-rounded-down"></i>
+<i class="icofont icofont-refresh"></i>
+<i class="icofont icofont-close-circled"></i>
+</div>
+</div>
+<div class="card-block">
+@using (Html.BeginForm("BookingNumber", "Books", FormMethod.Post))
+{
+        @Html.HiddenFor(m=>m.BookID)
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Book Name:</label>
+<div class="col-sm-10">
+ @Html.TextBoxFor(m => m.BookName, new { @class = "form-control", Readonly= true})
+<span class="messages"></span>
+</div>
+</div>
+
+
+
+<div class="form-group row">
+<label class="col-sm-2">Reservation</label>
+<div class="col-sm-10">
+<div class="checkbox-fade fade-in-primary">
+<label>
+@Html.CheckBoxFor(m => m.BookReserve)
+<span class="cr">
+<i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+</span>
+<span>Reserve</span>
+</label>
+</div>
+<span class="messages"></span>
+</div>
+</div>
+
+<div class="form-group row">
+<label class="col-sm-2"></label>
+<div class="col-sm-10">
+<button type="submit" class="btn btn-primary m-b-0">Submit</button>
+</div>
+</div>
+}
+</div>
+</div>
+
+@Html.ActionLink("Back", 
+                 "Index", // <-- Action Method Name  
+                 "Books", // <-- Controller Name  
+                 null, // <-- Route value  
+                 new { @class = "btn btn-primary" }
+                )

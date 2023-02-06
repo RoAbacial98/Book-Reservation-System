@@ -1,0 +1,88 @@
+﻿@model List<Books>
+@{
+    ViewData["Title"] = "Books";
+}
+
+
+<div class="card">
+<div class="card-header">
+<h5>Book List</h5>
+<div class="card-header-right">
+<i class="icofont icofont-rounded-down"></i>
+<i class="icofont icofont-refresh"></i>
+<i class="icofont icofont-close-circled"></i>
+</div>
+</div>
+<div class="card-block">
+<div class="dt-responsive table-responsive">
+<div id="simpletable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-sm-12 col-md-6 col-lg-8 col-xl-10"><div class="dataTables_length" id="simpletable_length"><label>Show <select name="simpletable_length" aria-controls="simpletable" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-2"><div id="simpletable_filter" class="dataTables_filter">
+              @using (@Html.BeginForm("Index", "Books",FormMethod.Get))
+            {
+                @Html.TextBox("search") <input type="submit" value="Search" class="btn btn-success btn-sm"  placeholder="" aria-controls="simpletable"/>
+
+            }
+        </div>
+        </div>
+    </div>
+</div>
+        <div class="row"><div class="col-xs-12 col-sm-12">
+<table id="simpletable" class="table table-hover table-bordered nowrap dataTable" role="grid" aria-describedby="simpletable_info">
+<thead>
+<tr role="row">
+    <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 248.547px;">Book Name</th>
+    <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 393.359px;">Reservation</th>
+    <th class="sorting_desc" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 148.141px;" aria-sort="descending"></th>
+</tr>
+</thead>
+<tbody>
+    @using (Html.BeginForm("Index", "BookDetails",FormMethod.Get))
+    {
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.BookName</td>
+
+                @if (item.BookReserve == true)
+                {
+                    <td>
+                    <button class="btn btn-danger" disabled>Not Available</button>
+                    </td>
+                    <td>
+                    <button class="btn btn-success" type="button" name="BookID" value="@item.BookID" onclick="Reserve(false)">
+                        <i class="ti-book"> Reseve a book</i>
+                    </button>
+                </td>
+                } else{
+                    <td>
+                    <button class="btn btn-warning" disabled>Available</button>
+                    </td>
+                    <td>
+                    <button class="btn btn-success" type="submit" name="BookID" value="@item.BookID" onclick="Reserve(true)">
+                        <i class="ti-book"> Reseve a book</i>
+                    </button>
+                </td>
+                }
+            </tr>
+            }
+    }
+</tbody>
+<tfoot>
+</tfoot>
+</table></div></div>
+<div class="row" style="margin-bottom:20px">
+    <div class="col-xs-12 col-sm-12 col-md-5"><div class="dataTables_info" id="simpletable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-xs-12 col-sm-12 col-md-7">
+    <div class="dataTables_paginate paging_simple_numbers" id="simpletable_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="simpletable_previous"><a href="#" aria-controls="simpletable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="simpletable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="simpletable" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="simpletable" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="simpletable" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="simpletable" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="simpletable" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="simpletable_next"><a href="#" aria-controls="simpletable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+</div>
+</div>
+</div>
+
+<script>
+ function Reserve(value){
+    if(value === false){
+        alert("Not Available")
+    }
+ }
+</script>

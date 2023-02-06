@@ -1,0 +1,238 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from flatable.phoenixcoded.net/default/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Jan 2019 11:25:26 GMT -->
+<head>
+    <title>@ViewData["Title"]</title>
+
+
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+          <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Phoenixcoded">
+    <meta name="keywords" content=", Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="Phoenixcoded">
+
+    <link rel="icon" href="~/assets/images/favicon.ico" type="image/x-icon">
+
+    @*<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">*@
+    <link rel="stylesheet" type="text/css" href="~/assets/css/fontsgoogleapis.css">
+
+    <link rel="stylesheet" type="text/css" href="~/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/icon/themify-icons/themify-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/icon/icofont/css/icofont.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/flag-icon/flag-icon.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/menu-search/css/component.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/dashboard/horizontal-timeline/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/dashboard/amchart/css/amchart.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/flag-icon/flag-icon.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/css/color/color-1.css" id="color" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/linearicons.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/simple-line-icons.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/ionicons.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/jquery.mCustomScrollbar.css">
+</head>
+<body>
+
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div></div>
+        </div>
+    </div>
+
+
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            
+            <partial name="_TopBar">
+            <partial name="_ChatActiveStatus">
+            <partial name="_ChatBox">
+               
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <partial name="_SideBar">
+
+                        <div class="pcoded-content">
+                            <div class="pcoded-inner-content">
+                                <div class="main-body">
+                                    <div class="page-wrapper">
+                                        <div class="page-header">
+                                            <div class="page-header-title">
+                                                <h4>@ViewData["Title"]</h4>
+                                            </div>
+                                            <partial name="_PageNavigation">
+                                        </div>
+                                        <hr />
+                                        <div class="page-body">
+                                            @*<div class="container">*@
+                                                @*<div class="row">*@
+                                                    @RenderBody()
+                                                @*</div>*@
+                                            @*</div>*@
+                                           </div>
+                                        </div>
+                                    @*<div id="styleSelector">
+                                    </div>*@
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--[if lt IE 9]>
+    <div class="ie-warning">
+        <h1>Warning!!</h1>
+        <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+        <div class="iew-container">
+            <ul class="iew-download">
+                <li>
+                    <a href="http://www.google.com/chrome/">
+                        <img src="assets/images/browser/chrome.png" alt="Chrome">
+                        <div>Chrome</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mozilla.org/en-US/firefox/new/">
+                        <img src="assets/images/browser/firefox.png" alt="Firefox">
+                        <div>Firefox</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.opera.com">
+                        <img src="assets/images/browser/opera.png" alt="Opera">
+                        <div>Opera</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.apple.com/safari/">
+                        <img src="assets/images/browser/safari.png" alt="Safari">
+                        <div>Safari</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                        <img src="assets/images/browser/ie.png" alt="">
+                        <div>IE (9 & above)</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>Sorry for the inconvenience!</p>
+    </div>
+    <![endif]-->
+
+
+    <script type="text/javascript" src="~/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="~/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/bower_components/tether/dist/js/tether.min.js"></script>
+    <script type="text/javascript" src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="~/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <script type="text/javascript" src="~/bower_components/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="~/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
+
+    <script type="text/javascript" src="~/bower_components/classie/classie.js"></script>
+
+    <script src="~/bower_components/d3/d3.js"></script>
+    <script src="~/bower_components/rickshaw/rickshaw.js"></script>
+
+    <script src="~/bower_components/raphael/raphael.min.js"></script>
+    <script src="~/bower_components/morris.js/morris.js"></script>
+
+    <script type="text/javascript" src="~/assets/pages/dashboard/horizontal-timeline/js/main.js"></script>
+
+    <script type="text/javascript" src="~/assets/pages/dashboard/amchart/js/amcharts.js"></script>
+    <script type="text/javascript" src="~/assets/pages/dashboard/amchart/js/serial.js"></script>
+    <script type="text/javascript" src="~/assets/pages/dashboard/amchart/js/light.js"></script>
+    <script type="text/javascript" src="~/assets/pages/dashboard/amchart/js/custom-amchart.js"></script>
+
+    <script type="text/javascript" src="~/bower_components/i18next/i18next.min.js"></script>
+    <script type="text/javascript" src="~/bower_components/i18next-xhr-backend/i18nextXHRBackend.min.js"></script>
+    <script type="text/javascript" src="~/bower_components/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script type="text/javascript" src="~/bower_components/jquery-i18next/jquery-i18next.min.js"></script>
+
+    <script type="text/javascript" src="~/assets/pages/dashboard/custom-dashboard.js"></script>
+    <script type="text/javascript" src="~/assets/js/script.js"></script>
+
+    <script src="~/assets/js/pcoded.min.js"></script>
+    <script src="~/assets/js/demo-12.js"></script>
+    <script src="~/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/assets/js/jquery.mousewheel.min.js"></script>
+</body>
+
+<!-- Mirrored from flatable.phoenixcoded.net/default/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Jan 2019 11:30:25 GMT -->
+</html>
+
+
+
+@*<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>@ViewData["Title"] - WebApplication1</title>
+            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+        </head>
+        <body>
+            <header>
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                    <div class="container">
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+
+            <footer class="border-top footer text-muted">
+                <div class="container">
+                    &copy; 2021 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+            </footer>
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+            <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+            <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+            @RenderSection("Scripts", required: false)
+        </body>
+        </html>*@

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "zUMIECCMrpBmZINyHY1KHAqRZMgP0nxOoURvVuQGaySsz7V0wTp3z1EjclKAdklNeyvGGemh9LLDMLveoGQIUA==",
+  "success": true,
+  "projectFilePath": "D:\\C#\\BookStoreReservation\\BookStoreReservation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\roaba\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\roaba\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\roaba\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\roaba\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
